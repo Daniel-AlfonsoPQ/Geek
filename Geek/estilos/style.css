@@ -1,0 +1,289 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: 'Bruno Ace', cursive;
+}
+
+.info {
+    background-color: #babab2;
+    padding: 5px;
+    margin: 5px;
+}
+
+.volver {
+    text-decoration: none;
+    color: #173753;
+}
+
+.intro {
+    background-color: #173753;
+    color: #E8E9EB;    
+    border-radius: 25px;
+}
+
+.intro h1, .intro p{
+    text-align: center;
+}
+
+.container_images img:hover, .intro:hover{
+    animation: animate__pulse .8s;
+} 
+
+@keyframes animate__pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+h1{
+    padding: 1.25rem;
+}
+p{
+    text-align: center;
+    padding: 0.9375rem;
+}
+
+.container_images img{
+    border-radius: 20px;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.info-container {
+    background-color: #bfbeb7;
+    box-shadow:
+    0px 2px 4.9px rgba(0, 0, 0, 0.036),
+    0px 6.7px 16.3px rgba(0, 0, 0, 0.048),
+    0px 30px 73px rgba(0, 0, 0, 0.07)
+    ;
+    margin: 15px;
+    border-radius: 35px;
+}
+
+.video-container {
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.video-container iframe{
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.description h2 {
+    padding: 30px 50px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    position: relative;
+    display: block;
+    transition: .5s;
+}
+
+.description p {
+    padding: 10px 50px;
+    margin-top: 0px;
+    
+}
+
+.description h2::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #173753;
+    top: 100%;
+    left: 0;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.description h2:hover {
+    color: #173753;
+}
+
+.description h2:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* inicio */
+
+.navegacion {
+    background-color: #bee2e4;
+    align-items: center;
+	justify-content: space-between;
+	padding-block: 0.5rem;
+    font-size: 1.875rem;
+}
+
+
+.bienvenida {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(190 226 228) 100%);
+}
+
+.body-container {
+    background-color: #e0dfd5;
+}
+
+.logo {
+    border-radius: 100%;
+}
+
+
+
+/* Queries */
+
+@media (max-width: 576px) {
+    
+    .bienvenida {
+        font-size: 0.8rem;
+    }
+    
+    .intro h1 {
+        font-size: 1rem;
+    }
+    .intro p {
+        font-size: 0.75rem;
+    }
+    .container_images img{
+        max-width: 130px;
+        min-width: 125px;
+    }
+    .description h2 {
+        font-size: 0.8rem;
+    }
+    .description p {
+        font-size: 0.65rem;
+    }
+    
+    .video-container iframe{
+        height: 80px;
+        width: 140px;  
+        border-radius: 10px;      
+    }
+    .logo {
+        width: 80px;
+    }
+    
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+
+
+    .bienvenida{
+        font-size: 1.875rem;
+    }
+    .navegacion{
+        font-size: 1.25rem;
+    }
+    .container_images img{
+        max-height: 200px;
+        max-width: 250px;
+    }
+
+    .video-container iframe{
+        min-height: 260px;
+        padding: 0.3125rem;
+    }
+    .logo {
+        width: 120px;
+    }
+
+}
+
+
+@media (min-width: 767px) {
+
+    .bienvenida{
+        font-size: 1.875rem;
+    }
+    .video-container iframe{
+        height: 160px;
+        width: 300px;
+        padding: 0.3125rem; 
+    }
+
+    .container_images img{
+        max-width: 350px;
+    }
+    .logo {
+        width: 150px;
+    }
+    
+}
+
+
+@media (min-width: 990px) {
+    .bienvenida {
+        font-size: 2.5rem;
+    }
+    .intro p {
+        font-size: 1.5625rem;
+    }
+
+    .intro h1 {
+        font-size: 3.125rem;
+    }
+    
+    .container_images img{
+        max-width: 450px;
+    }
+
+    .description h2{
+        font-size: 2.8125rem;
+    }
+
+    .description p{
+        font-size: 1.25rem;
+        text-align: justify;
+    }
+
+    .video-container iframe{
+        min-width: 350px;
+    }
+    .logo {
+        width: 200px;
+    }
+}
+
+@media (min-width: 1250px){
+    .bienvenida {
+        font-size: 2.8125rem;
+    }
+    
+    .intro h1 {
+        font-size: 3.4375rem;
+    }
+    .intro p {
+        font-size: 1.75rem;
+    }
+    .container_images img{
+        max-width: 500px;
+    }
+
+    .description h2 {
+        font-size: 3.4375rem;
+    }
+    .description p {
+        font-size: 1.375rem;
+    }
+
+    .video-container iframe{
+        height: 300px;
+        width: 500px;
+    }
+    .logo {
+        width: 250px;
+    }
+} 
